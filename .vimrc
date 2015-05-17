@@ -14,3 +14,12 @@ set showmatch
 set showmode
  
 colorscheme desert
+
+
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+noremap! <C-j> <ESC>
+vnoremap <C-j> <ESC>
