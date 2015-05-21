@@ -12,7 +12,12 @@ set cursorline
 set showcmd
 set showmatch
 set showmode
- 
+
+set hidden
+set nobackup
+set noswapfile
+
+
 colorscheme desert
 
 
