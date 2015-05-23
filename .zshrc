@@ -2,6 +2,12 @@ autoload -Uz compinit
 compinit
 
 autoload colors
+colors
+
+local p_cdir="%B%F{blue}[%~]%f%b"$'\n'
+local p_info="%n@%m"
+local p_mark="%B%(?,%F{green},%F{red})%(!,#,>)%f%b"
+PROMPT=" $p_cdir$p_info $p_mark "
 
 
 HISTFILE=~/.zsh_history
