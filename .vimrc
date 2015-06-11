@@ -1,7 +1,25 @@
+if 0 | endif
+
+if has('vim_starting')
+	if &compatible
+		set nocompatible
+	endif
+
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'vim-jp/vim-go-extra'
+
+call neobundle#end()
+
 filetype plugin indent on
 
-syntax enable
+NeoBundleCheck
 
+syntax enable
 
 set number
 set title
@@ -28,3 +46,5 @@ nnoremap gk k
 
 noremap! <C-j> <ESC>
 vnoremap <C-j> <ESC>
+
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
